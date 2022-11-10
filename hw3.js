@@ -363,7 +363,7 @@ else{
 
 let str2 = "929";
 let sum=0;
-for (let i=0; i<3;i++){
+for (let i=0; i<str2.length;i++){
   sum+=parseInt(str2.charAt(i));
 }
 console.log(sum);
@@ -373,7 +373,7 @@ console.log(sum);
 let str3 = "721451";
 let sumOnePart=0;
 let sumTwoPart=0;
-for (let i=0; i<6;i++){
+for (let i=0; i<str3.length;i++){
 (i<3) ? sumOnePart+=parseInt(str3.charAt(i)):sumTwoPart+=parseInt(str3.charAt(i));
 }
 if (sumOnePart===sumTwoPart) {
