@@ -109,22 +109,21 @@ function initCap(str) {
 console.log(initCap(str));
 
 function initSnake(str) {
-  if (!str) return str;
-  const words = initCap(str).split("");
-  for (let i = 0; i < words.length; i++) {
-    if (i===0 && words[0]===words[0].toUpperCase())
-    words[0] = words[0].toLowerCase();
-    if (words[i]===words[i].toUpperCase() && words[i-1]===words[i-1].toLowerCase() && i!=0) {
-      words[i-1] = words[i-1]+"_";
-    }
-
-}
-
-return words.join("").toLocaleLowerCase();
+ if (!str) return str;
+        const words = str.split("");
+        for (let i = 0; i < words.length; i++) {
+          if (i===0 && words[0]===words[0].toUpperCase())
+          words[0] = words[0].toLowerCase();
+          if (words[i]===words[i].toUpperCase() && i!=0) {
+            words[i]=words[i].toLowerCase();
+            words[i-1] = words[i-1]+"_";
+          }
+      }
+      return words.join("");
    
 }
 
-console.log(initSnake(str));
+console.log(initSnake("КаждыйОхотникЖелаетЗнать"));
 
 function repeatStr(str, n) {
 let message = "";  
